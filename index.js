@@ -16,12 +16,14 @@ var server = http.createServer(function(req, res) {
   var path = parsedUrl.pathname;
   var trimmedPath = path.replace(/^\/+|\/+$/g, '');    // Trims off the slashes from both sides
                                                        // (Helps us to handle requests to /foo and /foo/ equally.)
+  // Get the HTTP method
+  var method = req.method.toUpperCase();
 
   // Send the response
   res.end('Hello World!\n');
 
   // Log the request path
-  console.log('Request received on path: ', trimmedPath);
+  console.log('Request received on path: ', trimmedPath, ' with method: ', method);
 });
 
 
