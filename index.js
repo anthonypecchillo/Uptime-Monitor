@@ -18,15 +18,19 @@ var server = http.createServer(function(req, res) {
                                                        // (Helps us to handle requests to /foo and /foo/ equally.)
   // Get the query string as an object
   var queryStringObject = parsedUrl.query;
-
+ 
   // Get the HTTP method
   var method = req.method.toUpperCase();
+
+  // Get the headers as an object
+  var headers = req.headers;
 
   // Send the response
   res.end('Hello World!\n');
 
   // Log the request path
   console.log('Request received on path: ', trimmedPath, ' with method: ', method, ' with query string parameters: ', queryStringObject);
+  console.log('Request received with the following headers: ', headers);
 });
 
 
