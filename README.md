@@ -1,2 +1,2 @@
 # uptime-monitor
-Uptime monitoring API in raw Node.js (no packages or libraries)
+Uptime monitoring API written in raw Node.js (no packages or libraries)
