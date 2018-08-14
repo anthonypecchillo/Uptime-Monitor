@@ -21,8 +21,13 @@ var _data = require('./lib/data');
 // });
 
 // @TODO delete this
-_data.read('test', 'newFile', function(err, data) {
-  console.log('This was the error: ', err, ' and this was the data: ', data);
+// _data.read('test', 'newFile', function(err, data) {
+//   console.log('This was the error: ', err, ' and this was the data: ', data);
+// });
+
+// @TODO delete this
+_data.update('test', 'newFile', {'fizz': 'buzz'}, function(err) {
+  console.log('This was the error: ', err);
 });
 // ------------------------------------------------------------
 
